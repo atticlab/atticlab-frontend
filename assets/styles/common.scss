@@ -1,0 +1,59 @@
+body {
+  font-family: $nunito;
+  font-size: 16px;
+}
+
+a {
+  color: $color-content;
+  transition: color 0.2s;
+
+  &:hover,
+  &:active {
+    color: $color-content;
+    //color: $color-accent;
+  }
+}
+
+.icon {
+  cursor: pointer;
+
+  & > svg {
+    color: $color-content;
+    font-size: 22px;
+  }
+}
+
+.page {
+  &__title {
+    font-size: 38px;
+    font-weight: 700;
+    color: $color-content;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 28px;
+    font-weight: 300;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 8px 50px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: $color-accent;
+    color: $color-white;
+    border-radius: 4px;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  &--background-accent {
+    background: linear-gradient(to bottom, #bfe3eb, #ebf5ec), url('~assets/images/pattern.png');
+    background-size: 40px;
+  }
+}

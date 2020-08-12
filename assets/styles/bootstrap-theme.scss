@@ -1,0 +1,146 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+$primary: $color-accent;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $color-white;
+$body-color: $color-white;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif: 'Montserrat', sans-serif;
+
+// Links
+//
+// Style anchor elements.
+
+//$link-color: $color-red;
+//$link-hover-decoration: none;
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+//$table-hover-color: $color-white;
+//$table-hover-bg: $color-accent-transparent-08;
+
+//$table-head-bg: $color-accent;
+//$table-head-color: $color-white;
+
+//$table-color: $color-red;
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+//$dropdown-divider-bg: white;
+
+//$dropdown-link-color: white;
+//$dropdown-link-hover-color: white;
+//$dropdown-link-hover-bg: $color-red;
+//
+//$dropdown-link-active-color: white;
+//$dropdown-link-active-bg: $color-red;
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+//$input-btn-focus-color: $color-white;
+//$input-btn-focus-box-shadow: none;
+
+//$btn-box-shadow: none;
+//$btn-focus-box-shadow: none;
+//$btn-active-box-shadow: none;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+//$border-color: #5A5A5A;
+//$gray-300: $color-body;
+
+//$component-active-color: $color-red;
+//$component-active-bg: $color-white;
+
+// Close
+
+//$close-color: $color-red;
+//
+//
+//$secondary: $color-red;
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+//$dropdown-link-hover-bg: $color-red;
+//$dropdown-link-hover-color: $color-white;
+//
+//$dropdown-link-active-bg: $color-red;
+//$dropdown-link-active-color: $color-white;
+
+
+// Navs
+//
+//$nav-tabs-link-active-color: $color-content;
+//$nav-tabs-link-active-bg: $color-accent;
+
+// Navbar
+$navbar-light-color: $color-accent;
+//$navbar-light-hover-color: $color-accent;
+//$navbar-light-active-color: $color-accent;
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+//$dropdown-min-width: 5rem;
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+//$table-cell-padding:1rem;
+//$table-cell-padding-sm: .3rem;
+
+//$table-color: $body-color;
+//$table-bg: null;
+//$table-accent-bg: rgba($black, .05);
+//$table-hover-color: $table-color;
+//$table-hover-bg: rgba($black, .075);
+//$table-active-bg: $table-hover-bg;
+//
+//$table-border-width: $border-width;
+//$table-border-color: $border-color;
+//
+//$table-head-bg: $gray-200;
+//$table-head-color: $gray-700;
+
+
+//$card-bg: $color-white;
+//$card-color: $color-white;
+//$card-border-radius: 6px;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+//$container-max-widths: (
+//  sm: 540px,
+//  md: 720px,
+//  lg: 960px,
+//  xl: 1240px
+//);
