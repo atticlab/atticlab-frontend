@@ -5,6 +5,7 @@
       <b-container class="home__container">
         <div class="home__heading">
           <BigBackgroundText
+            ref="home__main-text"
             :options="{
               content: 'Atticlab',
               color: 'accent',
