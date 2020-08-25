@@ -18,7 +18,7 @@
         >
           Everstake
         </b-nav-item>
-        <b-nav-item class="menu__link" href="#">Out work</b-nav-item>
+        <b-nav-item class="menu__link" href="#">Our work</b-nav-item>
         <b-nav-item class="menu__link" href="#">Media Room</b-nav-item>
         <b-nav-item class="menu__link" href="#">Contact us</b-nav-item>
       </b-navbar-nav>
