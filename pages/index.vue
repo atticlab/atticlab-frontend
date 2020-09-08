@@ -235,6 +235,7 @@ export default {
           duration: 5000,
           direction: 'alternate',
           loop: true,
+          delay: 500,
         })
 
         anime({
@@ -243,49 +244,8 @@ export default {
           translateY: [-50, 0],
           easing: 'easeInOutQuad',
           duration: 500,
+          delay: 500,
         })
-        // const timeline = anime.timeline()
-
-        // timeline.add({
-        //   targets: [title, subtitle, contactButton],
-        //   opacity: [0, 1],
-        //   translateY: [-50, 0],
-        //   easing: 'easeInOutQuad',
-        //   duration: 500,
-        // })
-
-        // timeline
-        //   .add({
-        //     targets: mainLogotype,
-        //     strokeDashoffset: [0, anime.setDashoffset],
-        //     duration: 5000,
-        //     easing: 'easeInOutSine',
-        //   })
-        //   .add({
-        //     targets: mainLogotype,
-        //     translateY: [-25, 0],
-        //     duration: 500,
-        //     easing: 'easeInOutQuad',
-        //     once: true,
-        //   })
-        //   .add({
-        //     targets: [title, subtitle, contactButton],
-        //     opacity: [0, 1],
-        //     translateY: [-50, 0],
-        //     easing: 'easeInOutQuad',
-        //     duration: 500,
-        //   })
-        //   .add({
-        //     targets: mainLogotype,
-        //     strokeDashoffset: [anime.setDashoffset, 0],
-        //     easing: 'easeInOutSine',
-        //     duration: 10000,
-        //     delay: function (el, i) {
-        //       return i * 1500
-        //     },
-        //     direction: 'normal',
-        //     fill: '#daeeee',
-        //   })
       }
     },
     handleCounterAnimation(nodeInViewport) {
@@ -298,20 +258,20 @@ export default {
             targets: node,
             innerText: [results[index].initialValue, results[index].value],
             round: true,
-            delay: 300,
+            delay: 500,
             duration: 1000,
           })
         })
       }
     },
     handleBigTextAnimation(nodeInViewport, { target }) {
-      console.log(nodeInViewport)
       if (nodeInViewport) {
         animation({
           targets: target,
           translateY: [-50, 0],
           opacity: [0, 1],
           duration: 1500,
+          delay: 500,
         })
       }
     },
