@@ -3,23 +3,36 @@
     <!-- begin main -->
     <section class="home__main page--background-accent">
       <b-container class="home__container">
-        <div class="home__heading">
-          <BigBackgroundText
-            ref="home__main-text"
-            :options="{
-              content: 'Atticlab',
-              color: 'accent',
-              fontSize: '12em',
-              animation: true,
-            }"
-          />
-          <h1 class="page__title">
+        <div
+          v-observe-visibility="{
+            callback: handleHeaderAnimation,
+          }"
+          class="home__heading"
+        >
+          <div class="home-logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="994.368"
+              height="234.048"
+            >
+              <path
+                fill="#daeeee"
+                stroke="#fff"
+                d="M116.35 185.86L104.45 157.06L42.05 157.06L30.14 185.86L-1.73 185.86L58.18 51.46L88.90 51.46L148.99 185.86L116.35 185.86ZM52.03 133.44L94.66 133.44L73.34 81.98L52.03 133.44ZM184.13 185.86L184.13 76.80L141.12 76.80L141.12 51.46L258.24 51.46L258.24 76.80L215.23 76.80L215.23 185.86L184.13 185.86ZM304.70 185.86L304.70 76.80L261.70 76.80L261.70 51.46L378.82 51.46L378.82 76.80L335.81 76.80L335.81 185.86L304.70 185.86ZM395.52 185.86L395.52 51.46L426.62 51.46L426.62 185.86L395.52 185.86ZM522.82 188.16Q502.27 188.16 485.66 179.23Q469.06 170.30 459.55 154.46Q450.05 138.62 450.05 118.66L450.05 118.66Q450.05 98.69 459.55 82.85Q469.06 67.01 485.66 58.08Q502.27 49.15 523.01 49.15L523.01 49.15Q540.48 49.15 554.59 55.30Q568.70 61.44 578.30 72.96L578.30 72.96L558.34 91.39Q544.70 75.65 524.54 75.65L524.54 75.65Q512.06 75.65 502.27 81.12Q492.48 86.59 487.01 96.38Q481.54 106.18 481.54 118.66L481.54 118.66Q481.54 131.14 487.01 140.93Q492.48 150.72 502.27 156.19Q512.06 161.66 524.54 161.66L524.54 161.66Q544.70 161.66 558.34 145.73L558.34 145.73L578.30 164.16Q568.70 175.87 554.50 182.02Q540.29 188.16 522.82 188.16L522.82 188.16ZM599.23 185.86L599.23 51.46L630.34 51.46L630.34 160.51L697.73 160.51L697.73 185.86L599.23 185.86ZM816.77 185.86L804.86 157.06L742.46 157.06L730.56 185.86L698.69 185.86L758.59 51.46L789.31 51.46L849.41 185.86L816.77 185.86ZM752.45 133.44L795.07 133.44L773.76 81.98L752.45 133.44ZM962.11 115.97Q973.63 119.62 980.16 128.16Q986.69 136.70 986.69 149.18L986.69 149.18Q986.69 166.85 972.96 176.35Q959.23 185.86 932.93 185.86L932.93 185.86L863.42 185.86L863.42 51.46L929.09 51.46Q953.66 51.46 966.82 60.86Q979.97 70.27 979.97 86.40L979.97 86.40Q979.97 96.19 975.26 103.87Q970.56 111.55 962.11 115.97L962.11 115.97ZM925.25 74.88L894.34 74.88L894.34 106.56L925.25 106.56Q936.77 106.56 942.72 102.53Q948.67 98.50 948.67 90.62L948.67 90.62Q948.67 82.75 942.72 78.82Q936.77 74.88 925.25 74.88L925.25 74.88ZM930.62 162.43Q942.91 162.43 949.15 158.40Q955.39 154.37 955.39 145.92L955.39 145.92Q955.39 129.22 930.62 129.22L930.62 129.22L894.34 129.22L894.34 162.43L930.62 162.43Z"
+              />
+            </svg>
+          </div>
+          <h1 class="page__title page__title--animation">
             Fintech & blockchain software development
           </h1>
-          <p class="page__subtitle">
+          <p class="page__subtitle page__subtitle--animation">
             We build solutions that change the world
           </p>
-          <nuxt-link :to="{ name: 'contact' }" class="page__button">
+          <nuxt-link
+            :to="{ name: 'contact' }"
+            class="page__button home-contact"
+          >
             Contact us
           </nuxt-link>
         </div>
@@ -32,12 +45,15 @@
     <section class="about page__offset">
       <b-container class="home__container">
         <BigBackgroundText
+          v-observe-visibility="{
+            callback: handleBigTextAnimation,
+          }"
           :options="{
             content: 'About us',
             color: 'white',
             fontSize: '9em',
           }"
-          class="about__text"
+          class="about__text home-big-text-about"
         />
         <h2 class="home__title about__title">
           We are innovative fintech company
@@ -79,12 +95,15 @@
     <section class="tech-stack page__offset">
       <b-container class="home__container">
         <BigBackgroundText
+          v-observe-visibility="{
+            callback: handleBigTextAnimation,
+          }"
           :options="{
             content: 'Tech Stack',
             color: 'white',
             fontSize: '9em',
           }"
-          class="tech-stack__text"
+          class="tech-stack__text home-big-text"
         />
         <h2 class="home__title tech-stack__title">
           We love complex and unrealistic tasks
@@ -137,25 +156,29 @@
     <!-- begin tech stack -->
     <section class="results page__offset page--background-accent">
       <b-container class="home__container">
-        <b-row>
+        <b-row
+          v-observe-visibility="{
+            callback: handleCounterAnimation,
+          }"
+        >
           <b-col cols="12" lg="6">
-            <div class="result">
-              <div class="result__amount">180</div>
-              <div class="result__label">Clients</div>
-            </div>
-            <div class="result">
-              <div class="result__amount">46</div>
-              <div class="result__label">Website Development</div>
+            <div
+              v-for="(result, index) in results.slice(0, 2)"
+              :key="index"
+              class="result"
+            >
+              <div class="result__amount">{{ result.initialValue }}</div>
+              <div class="result__label">{{ result.label }}</div>
             </div>
           </b-col>
           <b-col cols="12" lg="6">
-            <div class="result">
-              <div class="result__amount">232</div>
-              <div class="result__label">Consultations</div>
-            </div>
-            <div class="result">
-              <div class="result__amount">86</div>
-              <div class="result__label">Projects</div>
+            <div
+              v-for="(result, index) in results.slice(2, 4)"
+              :key="index"
+              class="result"
+            >
+              <div class="result__amount">{{ result.initialValue }}</div>
+              <div class="result__label">{{ result.label }}</div>
             </div>
           </b-col>
         </b-row>
@@ -171,14 +194,127 @@
 </template>
 
 <script>
+/*eslint-disable*/
+import { ObserveVisibility } from 'vue-observe-visibility'
+import { animation } from '~/services/animation.service'
 import BigBackgroundText from '~/components/BigBackgroundText.vue'
 import SocialNetworks from '~/components/SocialNetworks.vue'
+import anime from 'animejs'
 
 export default {
   name: 'Index',
   components: {
     BigBackgroundText,
     SocialNetworks,
+  },
+  directives: {
+    ObserveVisibility,
+  },
+  data() {
+    return {
+      results: [
+        { label: 'Clients', initialValue: 0, value: '180' },
+        { label: 'Website Development', initialValue: 0, value: '46' },
+        { label: 'Consultations', initialValue: 0, value: '232' },
+        { label: 'Projects', initialValue: 0, value: '86' },
+      ],
+    }
+  },
+  methods: {
+    handleHeaderAnimation(nodeInViewport) {
+      if (nodeInViewport) {
+        const title = document.querySelectorAll('.page__title')
+        const subtitle = document.querySelectorAll('.page__subtitle')
+        const mainLogotype = document.querySelectorAll('.home-logo path')
+        const contactButton = document.querySelector('.home-contact')
+
+        anime({
+          targets: mainLogotype,
+          strokeDashoffset: [anime.setDashoffset, 0],
+          easing: 'easeInOutSine',
+          duration: 5000,
+          direction: 'alternate',
+          loop: true,
+        })
+
+        anime({
+          targets: [title, subtitle, contactButton],
+          opacity: [0, 1],
+          translateY: [-50, 0],
+          easing: 'easeInOutQuad',
+          duration: 500,
+        })
+        // const timeline = anime.timeline()
+
+        // timeline.add({
+        //   targets: [title, subtitle, contactButton],
+        //   opacity: [0, 1],
+        //   translateY: [-50, 0],
+        //   easing: 'easeInOutQuad',
+        //   duration: 500,
+        // })
+
+        // timeline
+        //   .add({
+        //     targets: mainLogotype,
+        //     strokeDashoffset: [0, anime.setDashoffset],
+        //     duration: 5000,
+        //     easing: 'easeInOutSine',
+        //   })
+        //   .add({
+        //     targets: mainLogotype,
+        //     translateY: [-25, 0],
+        //     duration: 500,
+        //     easing: 'easeInOutQuad',
+        //     once: true,
+        //   })
+        //   .add({
+        //     targets: [title, subtitle, contactButton],
+        //     opacity: [0, 1],
+        //     translateY: [-50, 0],
+        //     easing: 'easeInOutQuad',
+        //     duration: 500,
+        //   })
+        //   .add({
+        //     targets: mainLogotype,
+        //     strokeDashoffset: [anime.setDashoffset, 0],
+        //     easing: 'easeInOutSine',
+        //     duration: 10000,
+        //     delay: function (el, i) {
+        //       return i * 1500
+        //     },
+        //     direction: 'normal',
+        //     fill: '#daeeee',
+        //   })
+      }
+    },
+    handleCounterAnimation(nodeInViewport) {
+      if (nodeInViewport) {
+        const nodes = document.querySelectorAll('.result__amount')
+        const { results } = this
+
+        nodes.forEach((node, index) => {
+          animation({
+            targets: node,
+            innerText: [results[index].initialValue, results[index].value],
+            round: true,
+            delay: 300,
+            duration: 1000,
+          })
+        })
+      }
+    },
+    handleBigTextAnimation(nodeInViewport, { target }) {
+      console.log(nodeInViewport)
+      if (nodeInViewport) {
+        animation({
+          targets: target,
+          translateY: [-50, 0],
+          opacity: [0, 1],
+          duration: 1500,
+        })
+      }
+    },
   },
 }
 </script>

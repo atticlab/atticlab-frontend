@@ -1,13 +1,10 @@
 import anime from 'animejs'
 
-const translate = (element) => {
-  anime({
-    targets: element,
-    easing: 'linear',
-    loop: true,
-    padding: '10px 52px',
-    duration: 1000,
+const animation = ({ targets, ...rest }) => {
+  return anime({
+    targets,
+    ...rest,
   })
 }
 
-export { translate }
+export { animation }
