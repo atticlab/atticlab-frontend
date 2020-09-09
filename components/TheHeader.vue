@@ -1,16 +1,16 @@
 <template>
   <div class="header">
-    <NotificationLine
-      v-if="isNotificationVisible"
-      @onClose="handleNotificationClose"
-    >
-      <template>
-        <a href="https://atticlab.net/vote" target="_blank">
-          Please, vote for us as an EOS Block Producer, we need your support to
-          continue offering tools and services!
-        </a>
-      </template>
-    </NotificationLine>
+    <!--    <NotificationLine-->
+    <!--      v-if="isNotificationVisible"-->
+    <!--      @onClose="handleNotificationClose"-->
+    <!--    >-->
+    <!--      <template>-->
+    <!--        <a href="https://atticlab.net/vote" target="_blank">-->
+    <!--          Please, vote for us as an EOS Block Producer, we need your support to-->
+    <!--          continue offering tools and services!-->
+    <!--        </a>-->
+    <!--      </template>-->
+    <!--    </NotificationLine>-->
     <b-container>
       <TheMenu />
     </b-container>
@@ -18,13 +18,13 @@
 </template>
 
 <script>
-import NotificationLine from '~/components/NotificationLine.vue'
+// import NotificationLine from '~/components/NotificationLine.vue'
 import TheMenu from '~/components/TheMenu.vue'
 
 export default {
   name: 'TheHeader',
   components: {
-    NotificationLine,
+    // NotificationLine,
     TheMenu,
   },
   data() {

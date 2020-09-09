@@ -6,7 +6,6 @@
       'big-background-text--white': options.color === 'white',
       'big-background-text--animation': options.animation,
     }"
-    :style="{ fontSize: options.fontSize }"
   >
     {{ options.content }}
   </div>
@@ -26,11 +25,30 @@ export default {
 
 <style lang="scss" scoped>
 .big-background-text {
+  padding-bottom: 35px;
   user-select: none;
   pointer-events: none;
   font-weight: 700;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
+  line-height: 1;
+  font-size: 9em;
+
+  //@media (min-width: 1200px) {
+  //  display: none;
+  //}
+
+  @media (min-width: 600px) and (max-width: 768px) {
+    font-size: 120px;
+  }
+
+  @media (min-width: 480px) and (max-width: 600px) {
+    font-size: 80px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 50px;
+  }
 
   &--accent {
     color: #daeeee;
