@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  nginx:
+    image: nginx:1.13
+    container_name: everstake-icon-votes-monitor-front
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8888:80'
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    logging:
+      options:
+        max-size: 50m
