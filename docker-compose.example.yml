@@ -2,7 +2,7 @@ version: '3.7'
 services:
   nginx:
     image: nginx:1.13
-    container_name: everstake-icon-votes-monitor-front
+    container_name: atticlab-front
     restart: always
     build:
       context: .
