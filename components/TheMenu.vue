@@ -9,18 +9,33 @@
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item class="menu__link" href="/">Home</b-nav-item>
-        <b-nav-item class="menu__link" href="/about">About us</b-nav-item>
-        <b-nav-item
-          class="menu__link"
-          href="https://everstake.one/"
-          target="_blank"
-        >
-          Everstake
+        <b-nav-item>
+          <NuxtLink class="menu__link" :to="{ name: 'index' }">Home</NuxtLink>
         </b-nav-item>
-        <b-nav-item class="menu__link" href="#">Out work</b-nav-item>
-        <b-nav-item class="menu__link" href="#">Media Room</b-nav-item>
-        <b-nav-item class="menu__link" href="#">Contact us</b-nav-item>
+        <b-nav-item
+          ><NuxtLink class="menu__link" :to="{ name: 'about' }"
+            >About us</NuxtLink
+          ></b-nav-item
+        >
+        <b-nav-item
+          ><NuxtLink
+            class="menu__link"
+            to="https://everstake.one/"
+            target="_blank"
+          >
+            Everstake
+          </NuxtLink></b-nav-item
+        >
+        <b-nav-item
+          ><NuxtLink class="menu__link" :to="{ name: 'our-work' }"
+            >Our work</NuxtLink
+          ></b-nav-item
+        >
+        <b-nav-item
+          ><NuxtLink class="menu__link" :to="{ name: 'contact-us' }"
+            >Contact us</NuxtLink
+          ></b-nav-item
+        >
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -39,7 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 .menu {
-  &__link a {
+  &__link {
     font-size: 15px;
     font-weight: 700;
     color: $color-content;

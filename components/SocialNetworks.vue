@@ -14,23 +14,30 @@
 
 <script>
 export default {
-  name: 'AnimatedBackgroundText',
-  data() {
-    return {
-      socials: [
-        { name: 'Steemit', href: 'https://steemit.com/@attic-lab' },
-        { name: 'Reddit', href: 'https://www.reddit.com/user/atticlab_it' },
-        {
-          name: 'Linkedin',
-          href: 'https://www.linkedin.com/in/attic-lab-5ab9a2129/',
-        },
-        { name: 'Facebook', href: 'https://www.facebook.com/atticlab/' },
-        { name: 'Twitter', href: 'https://twitter.com/atticlab_it' },
-        { name: 'Medium', href: 'https://medium.com/eosatticlab' },
-        { name: 'Github', href: 'https://github.com/atticlab/' },
-        { name: 'Telegram', href: 'https://t.me/atticlabeosb' },
-      ],
-    }
+  name: 'SocialNetworks',
+  props: {
+    socials: {
+      type: Array,
+      default: () => {
+        return [
+          { name: 'Steemit', href: 'https://steemit.com/@attic-lab' },
+          { name: 'Reddit', href: 'https://www.reddit.com/user/atticlab_it' },
+          {
+            name: 'Linkedin',
+            href: 'https://www.linkedin.com/in/attic-lab-5ab9a2129/',
+          },
+          { name: 'Facebook', href: 'https://www.facebook.com/atticlab/' },
+          { name: 'Twitter', href: 'https://twitter.com/atticlab_it' },
+          { name: 'Medium', href: 'https://medium.com/eosatticlab' },
+          { name: 'Github', href: 'https://github.com/atticlab/' },
+          { name: 'Telegram', href: 'https://t.me/atticlabeosb' },
+        ]
+      },
+    },
+    mode: {
+      type: String,
+      default: 'text',
+    },
   },
 }
 </script>

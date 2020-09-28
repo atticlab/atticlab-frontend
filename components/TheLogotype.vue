@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    Atticlab
+    <NuxtLink :to="{ name: 'index' }">Atticlab</NuxtLink>
   </div>
 </template>
 
