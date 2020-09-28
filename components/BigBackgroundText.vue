@@ -5,6 +5,9 @@
       'big-background-text--accent': options.color === 'accent',
       'big-background-text--white': options.color === 'white',
       'big-background-text--animation': options.animation,
+      'big-background-text--right': options.position === 'right',
+      'big-background-text-size-large': options.fontSize === '9em',
+      'big-background-text-size-medium': options.fontSize === '6em',
     }"
   >
     {{ options.content }}
@@ -18,6 +21,9 @@ export default {
     options: {
       type: Object,
       required: true,
+      default: () => ({
+        fontSize: '9em',
+      }),
     },
   },
 }
@@ -32,23 +38,6 @@ export default {
   text-align: left;
   text-transform: uppercase;
   line-height: 1;
-  font-size: 9em;
-
-  //@media (min-width: 1200px) {
-  //  display: none;
-  //}
-
-  @media (min-width: 600px) and (max-width: 768px) {
-    font-size: 120px;
-  }
-
-  @media (min-width: 480px) and (max-width: 600px) {
-    font-size: 80px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 50px;
-  }
 
   &--accent {
     color: #daeeee;
@@ -70,6 +59,34 @@ export default {
   &--animation {
     animation: rotate-left-to-right 8s ease-in-out infinite,
       text-shadow 8s ease-in-out infinite;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &-size-large {
+    font-size: 9em;
+
+    @media (max-width: 1024px) {
+      font-size: 80px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 50px;
+    }
+  }
+
+  &-size-medium {
+    font-size: 6em;
+
+    @media (max-width: 1024px) {
+      font-size: 80px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 50px;
+    }
   }
 }
 </style>

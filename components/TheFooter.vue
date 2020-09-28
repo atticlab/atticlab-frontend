@@ -5,7 +5,7 @@
         <img class="footer__img" src="~assets/images/logo.png" alt="Atticlab" />
       </div>
       <div class="footer__menu">
-        <NuxtLink class="footer__link" :to="{ name: 'home' }">Home</NuxtLink>
+        <NuxtLink class="footer__link" :to="{ name: 'index' }">Home</NuxtLink>
         <NuxtLink class="footer__link" :to="{ name: 'about' }"
           >About us</NuxtLink
         >
@@ -17,11 +17,6 @@
         >
         <NuxtLink class="footer__link" :to="{ name: 'contact-us' }"
           >Contact us</NuxtLink
-        >
-      </div>
-      <div class="footer__action">
-        <nuxt-link :to="{ name: 'about' }" class="page__button results__button"
-          >Join our team</nuxt-link
         >
       </div>
       <div class="footer__contacts">

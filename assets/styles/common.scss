@@ -1,3 +1,9 @@
+html,
+body {
+  min-width: 320px;
+  overflow: auto;
+}
+
 body {
   font-family: $nunito;
   font-size: 16px;
@@ -38,6 +44,7 @@ a {
     font-weight: 700;
     color: $color-content;
     text-transform: uppercase;
+    animation: transform 2s ease-in-out;
 
     @media (max-width: 480px) {
       font-size: 24px;
@@ -45,8 +52,9 @@ a {
   }
 
   &__subtitle {
-    font-size: 28px;
+    font-size: 19px;
     font-weight: 300;
+    animation: transform 2s ease-in-out;
   }
 
   &__title,
@@ -74,7 +82,14 @@ a {
   }
 
   &--background-accent {
-    background: linear-gradient(to bottom, #bfe3eb, #ebf5ec), url('~assets/images/pattern.png');
+    background: linear-gradient(to bottom, #bfe3eb, #ebf5ec);
     background-size: 40px;
+    //background: linear-gradient(to bottom, #bfe3eb, #ebf5ec);
+    //background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
   }
+}
+
+.mb35 {
+  margin-bottom: 35px;
 }

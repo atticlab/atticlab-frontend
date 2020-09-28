@@ -71,7 +71,15 @@ export default {
     '@nuxtjs/style-resources',
   ],
   bootstrapVue: {
-    componentPlugins: ['LayoutPlugin', 'NavbarPlugin'],
+    componentPlugins: [
+      'LayoutPlugin',
+      'NavbarPlugin',
+      'FormPlugin',
+      'ButtonPlugin',
+      'FormInputPlugin',
+      'FormGroupPlugin',
+      'FormTextareaPlugin',
+    ],
   },
   styleResources: {
     scss: ['@/assets/styles/variables.scss'],
