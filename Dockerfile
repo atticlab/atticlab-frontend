@@ -5,7 +5,7 @@ COPY package.json /app/package.json
 RUN npm install --silent
 RUN npm install @vue/cli@3.7.0 -g
 COPY . /app
-RUN npm run build
+RUN npm run generate
 
 # production environment
 FROM nginx:1.16.0-alpine
