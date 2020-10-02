@@ -7,7 +7,11 @@
       class="socials__link"
       target="_blank"
     >
-      {{ social.name }}
+      <span v-if="mode === 'text'"> {{ social.name }} </span>
+      <font-awesome-icon
+        v-else-if="'icon'"
+        :icon="['fab', social.name.toLowerCase()]"
+      />
     </a>
   </div>
 </template>
@@ -20,7 +24,7 @@ export default {
       type: Array,
       default: () => {
         return [
-          { name: 'Steemit', href: 'https://steemit.com/@attic-lab' },
+          // { name: 'Steemit', href: 'https://steemit.com/@attic-lab' },
           { name: 'Reddit', href: 'https://www.reddit.com/user/atticlab_it' },
           {
             name: 'Linkedin',

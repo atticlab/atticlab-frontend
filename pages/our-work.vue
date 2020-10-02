@@ -4,14 +4,12 @@
     <div class="our-work__main">
       <b-container fluid="lg">
         <BigBackgroundText
-          v-observe-visibility="{
-            callback: debounce(handleBigTextAnimation, 300),
-          }"
           :options="{
             content: 'Our work',
             color: 'white',
             position: 'right',
             fontSize: '9em',
+            animation: true,
           }"
           class="our-work-background-text"
         />
@@ -132,7 +130,7 @@ export default {
 
   &-item {
     position: relative;
-    min-height: 100vh;
+    min-height: 600px;
     padding: 5% 0;
 
     @media (max-width: 960px) {

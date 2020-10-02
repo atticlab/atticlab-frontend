@@ -18,10 +18,10 @@
           <b-row>
             <b-col cols="12" lg="6" order="2" order-lg="1">
               <b-form
-                @submit="onSubmit"
-                @reset="onReset"
                 v-if="show"
                 class="contact__form"
+                @submit="onSubmit"
+                @reset="onReset"
               >
                 <b-form-group
                   id="input-group-1"
@@ -100,13 +100,6 @@ export default {
         email: '',
         message: '',
       },
-      foods: [
-        { text: 'Select One', value: null },
-        'Carrots',
-        'Beans',
-        'Tomatoes',
-        'Corn',
-      ],
       show: true,
     }
   },
@@ -136,7 +129,6 @@ export default {
       // Reset our form values
       this.form.email = ''
       this.form.name = ''
-      this.form.food = null
       this.form.checked = []
       // Trick to reset/clear native browser form validation state
       this.show = false

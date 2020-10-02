@@ -1,41 +1,41 @@
 @keyframes text-shadow {
   0% {
-    text-shadow: rgb(208, 230, 231) 1px -1px, rgb(208, 230, 231) 2px -2px,
-      rgb(208, 230, 231) 3px -3px, rgb(208, 230, 231) 4px -4px,
-      rgb(208, 230, 231) 5px -5px, rgb(208, 230, 231) 6px -6px,
-      rgb(208, 230, 231) 7px -7px, rgb(208, 230, 231) 8px -8px,
-      rgb(208, 230, 231) 9px -9px, rgb(189, 214, 218) 10px -10px 40px;
+    text-shadow: #eeeef0 1px -1px, #eeeef0 2px -2px,
+      #eeeef0 3px -3px, #eeeef0 4px -4px,
+      #eeeef0 5px -5px, #eeeef0 6px -6px,
+      #eeeef0 7px -7px, #eeeef0 8px -8px,
+      #eeeef0 9px -9px, #eeeef0 10px -10px 40px;
   }
   20% {
-    text-shadow: rgb(208, 230, 231) -1px -1px, rgb(208, 230, 231) -2px -2px,
-      rgb(208, 230, 231) -3px -3px, rgb(208, 230, 231) -4px -4px,
-      rgb(208, 230, 231) -5px -5px, rgb(208, 230, 231) -6px -6px,
-      rgb(208, 230, 231) -7px -7px, rgb(208, 230, 231) -8px -8px,
-      rgb(208, 230, 231) -9px -9px, rgb(189, 214, 218) -10px -10px 40px;
+    text-shadow: #eeeef0 -1px -1px, #eeeef0 -2px -2px,
+      #eeeef0 -3px -3px, #eeeef0 -4px -4px,
+      #eeeef0 -5px -5px, #eeeef0 -6px -6px,
+      #eeeef0 -7px -7px, #eeeef0 -8px -8px,
+      #eeeef0 -9px -9px, #eeeef0 -10px -10px 40px;
   }
 
   40% {
-    text-shadow: rgb(208, 230, 231) -1px 1px, rgb(208, 230, 231) -2px 2px,
-      rgb(208, 230, 231) -3px 3px, rgb(208, 230, 231) -4px 4px,
-      rgb(208, 230, 231) -5px 5px, rgb(208, 230, 231) -6px 6px,
-      rgb(208, 230, 231) -7px 7px, rgb(208, 230, 231) -8px 8px,
-      rgb(208, 230, 231) -9px 9px, rgb(189, 214, 218) -10px 10px 40px;
+    text-shadow: #eeeef0 -1px 1px, #eeeef0 -2px 2px,
+      #eeeef0 -3px 3px, #eeeef0 -4px 4px,
+      #eeeef0 -5px 5px, #eeeef0 -6px 6px,
+      #eeeef0 -7px 7px, #eeeef0 -8px 8px,
+      #eeeef0 -9px 9px, #eeeef0 -10px 10px 40px;
   }
 
   60% {
-    text-shadow: rgb(208, 230, 231) 1px 1px, rgb(208, 230, 231) 2px 2px,
-      rgb(208, 230, 231) 3px 3px, rgb(208, 230, 231) 4px 4px,
-      rgb(208, 230, 231) 5px 5px, rgb(208, 230, 231) 6px 6px,
-      rgb(208, 230, 231) 7px 7px, rgb(208, 230, 231) 8px 8px,
-      rgb(208, 230, 231) 9px 9px, rgb(189, 214, 218) 10px 10px 40px;
+    text-shadow: #eeeef0 1px 1px, #eeeef0 2px 2px,
+      #eeeef0 3px 3px, #eeeef0 4px 4px,
+      #eeeef0 5px 5px, #eeeef0 6px 6px,
+      #eeeef0 7px 7px, #eeeef0 8px 8px,
+      #eeeef0 9px 9px, #eeeef0 10px 10px 40px;
   }
 
   100% {
-    text-shadow: rgb(208, 230, 231) 1px -1px, rgb(208, 230, 231) 2px -2px,
-      rgb(208, 230, 231) 3px -3px, rgb(208, 230, 231) 4px -4px,
-      rgb(208, 230, 231) 5px -5px, rgb(208, 230, 231) 6px -6px,
-      rgb(208, 230, 231) 7px -7px, rgb(208, 230, 231) 8px -8px,
-      rgb(208, 230, 231) 9px -9px, rgb(189, 214, 218) 10px -10px 40px;
+    text-shadow: #eeeef0 1px -1px, #eeeef0 2px -2px,
+      #eeeef0 3px -3px, #eeeef0 4px -4px,
+      #eeeef0 5px -5px, #eeeef0 6px -6px,
+      #eeeef0 7px -7px, #eeeef0 8px -8px,
+      #eeeef0 9px -9px, #eeeef0 10px -10px 40px;
   }
 }
 
@@ -146,6 +146,21 @@
   }
   100% {
     background-position: 50% 0;
+  }
+}
+
+@keyframes background {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  25% {
+    background-position: 0 -25%, 0 25%;
+  }
+  50% {
+    background-position: 0 -50%, 0 50%;
+  }
+  100% {
+    background-position: 0 -100%, 0 100%;
   }
 }
 
