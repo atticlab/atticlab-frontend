@@ -20,14 +20,15 @@
               <b-form
                 v-if="show"
                 class="contact__form"
-                @submit="onSubmit"
-                @reset="onReset"
+                action="https://formspree.io/f/inbox@atticlab.net"
+                method="POST"
               >
                 <b-form-group
                   id="input-group-1"
                   label="Email address:"
                   label-for="input-1"
                   description="We'll never share your email with anyone else."
+                  name="_replyto"
                 >
                   <b-form-input
                     id="input-1"
@@ -50,6 +51,7 @@
                     rows="3"
                     max-rows="6"
                     required
+                    name="message"
                   ></b-form-textarea>
                 </b-form-group>
 
