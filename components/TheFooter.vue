@@ -1,8 +1,18 @@
 <template>
-  <div class="footer page--background-accent">
+  <div
+    class="footer page--background-accent"
+    :class="{
+      'footer-white': $route.name === 'index',
+    }"
+  >
     <b-container>
       <div class="footer__logo">
         <img class="footer__img" src="~assets/images/logo.png" alt="Atticlab" />
+      </div>
+      <div class="footer__socials">
+        <!-- begin social networks -->
+        <SocialNetworks mode="icon" />
+        <!-- end social networks -->
       </div>
       <div class="footer__menu">
         <NuxtLink class="footer__link" :to="{ name: 'index' }">Home</NuxtLink>
@@ -39,8 +49,13 @@
 </template>
 
 <script>
+import SocialNetworks from '../components/SocialNetworks'
+
 export default {
   name: 'TheFooter',
+  components: {
+    SocialNetworks,
+  },
 }
 </script>
 
@@ -72,7 +87,7 @@ export default {
     transition: color 0.2s;
 
     &:hover {
-      color: #00ead4;
+      color: #fff;
       text-decoration: none;
     }
   }
@@ -128,6 +143,43 @@ export default {
     @media (max-width: 480px) {
       display: none;
     }
+  }
+}
+</style>
+
+<style lang="scss">
+.footer__socials {
+  margin: 35px 0;
+  text-align: center;
+
+  & .socials__link {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 26px;
+  }
+
+  & .socials__link:first-child {
+    margin-left: 0;
+  }
+
+  & .socials__link:last-child {
+    margin-right: 0;
+  }
+}
+</style>
+
+<style lang="scss">
+.footer {
+  & .nuxt-link-exact-active {
+    color: #fff !important;
+  }
+}
+
+.footer--white {
+  background: #fff !important;
+
+  & .nuxt-link-exact-active {
+    color: #01ead4 !important;
   }
 }
 </style>

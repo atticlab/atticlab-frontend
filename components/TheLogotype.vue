@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    <NuxtLink :to="{ name: 'index' }">Atticlab</NuxtLink>
+    <NuxtLink class="logo__link" :to="{ name: 'index' }">Atticlab</NuxtLink>
   </div>
 </template>
 
@@ -14,8 +14,12 @@ export default {
 .logo {
   font-size: 24px;
   font-weight: 900;
-  color: #555;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.logo__link {
+  text-decoration: none;
+  color: #555 !important;
 }
 </style>

@@ -27,6 +27,7 @@
             <BigBackgroundText
               v-observe-visibility="{
                 callback: debounce(handleBigTextAnimation, 350),
+                once: true,
               }"
               :options="{
                 content: 'ATTICLAB',
@@ -57,6 +58,7 @@
         <BigBackgroundText
           v-observe-visibility="{
             callback: debounce(handleBigTextAnimation, 350),
+            once: true,
           }"
           :options="{
             content: 'About us',
@@ -89,6 +91,7 @@
         <BigBackgroundText
           v-observe-visibility="{
             callback: debounce(handleBigTextAnimation, 350),
+            once: true,
           }"
           :options="{
             content: 'Our expertise',
@@ -132,6 +135,7 @@
         <b-row
           v-observe-visibility="{
             callback: debounce(handleCounterAnimation, 300),
+            once: true,
           }"
         >
           <b-col cols="12" lg="6" class="mb35">
@@ -273,12 +277,13 @@ export default {
           opacity: [0, 1],
           duration: 1500,
           delay: 300,
+          once: true,
           begin() {
-            target.style.visibility = 'visible';
+            // target.style.visibility = 'visible';
           }
         })
       } else {
-        target.style.visibility = 'hidden';
+        // target.style.visibility = 'hidden';
       }
     },
   },
@@ -532,6 +537,11 @@ export default {
     font-size: 24px;
     font-weight: 900;
     text-transform: uppercase;
+
+    @media (max-width: 420px) {
+      margin: auto;
+      width: 80%;
+    }
   }
 
   &:not(:last-child) {
