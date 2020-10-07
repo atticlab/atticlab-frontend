@@ -29,22 +29,34 @@
             force for quite a few profitable banks for 20 years now. No matter
             how big of a bank we’re dealing with, we can handle it.
           </p>
-          <nuxt-link
-            :to="{ name: 'contact-us' }"
-            class="page__button home-contact"
-          >
-            Contact us
-          </nuxt-link>
+          <div class="about__contact">
+            <nuxt-link
+              :to="{ name: 'contact-us' }"
+              class="page__button home-contact"
+            >
+              Contact us
+            </nuxt-link>
+          </div>
         </div>
       </b-container>
     </div>
     <!-- end main -->
     <!-- begin team -->
-    <!--    <div class="about__team">-->
-    <!--      <b-container fluid="lg">-->
-    <!--        <h2 class="page__title">MEET OUR TEAM</h2>-->
-    <!--      </b-container>-->
-    <!--    </div>-->
+    <div class="about__team team">
+      <b-container fluid="lg">
+        <h2 class="page__title team__title">MEET OUR TEAM</h2>
+        <ul class="team-list">
+          <li
+            v-for="member in team"
+            :key="member.name"
+            class="team__member member"
+          >
+            <img class="member__picture" :src="member.src" :alt="member.name" />
+            <span class="member__name">{{ member.name }}</span>
+          </li>
+        </ul>
+      </b-container>
+    </div>
     <!-- end team -->
   </div>
 </template>
@@ -68,6 +80,36 @@ export default {
   data() {
     return {
       debounce,
+      team: [
+        {
+          name: 'Sergii Vasylchuk',
+          src: require('../assets/images/team/vasylchuk.jpg'),
+        },
+        {
+          name: 'Sergii Ropchan',
+          src: require('../assets/images/team/ropchan.jpg'),
+        },
+        {
+          name: 'Bohdan Opryshko',
+          src: require('../assets/images/team/opryshko.jpg'),
+        },
+        {
+          name: 'Vit Parkhomenko',
+          src: require('../assets/images/team/parkhomenko.jpg'),
+        },
+        {
+          name: 'Sabrina Korablova',
+          src: require('../assets/images/team/korablova.jpg'),
+        },
+        {
+          name: 'Olha Kaposloz',
+          src: require('../assets/images/team/kaposloz.jpg'),
+        },
+        {
+          name: 'Mykola Shylzhenko',
+          src: require('../assets/images/team/shylzhenko.jpg'),
+        },
+      ],
     }
   },
   methods: {
@@ -116,5 +158,50 @@ export default {
   &-background-text {
     animation: rotate 4s ease-in-out alternate infinite;
   }
+
+  .about__contact {
+    @media (max-width: 1024px) {
+      text-align: center;
+    }
+  }
+}
+</style>
+
+<style lang="scss" scoped>
+.team-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  list-style: none;
+  padding-left: 0;
+}
+
+@media (max-width: 1024px) {
+  .team-list {
+    justify-content: center;
+  }
+
+  .team__title {
+    text-align: center;
+  }
+}
+
+.team__member {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+}
+
+.team__member:last-child {
+  padding-bottom: 0;
+}
+
+.member__name {
+  text-align: center;
+  color: #555;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 25px;
 }
 </style>
