@@ -1,6 +1,6 @@
 <template>
   <div
-    class="header"
+    class="header page--background-accent"
     :class="{
       'header--white': $route.name !== 'index',
     }"
@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  background: #bfe3eb;
+  background-color: #bfe3eb;
 }
 </style>
 

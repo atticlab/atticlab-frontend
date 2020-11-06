@@ -30,9 +30,6 @@
         >
       </div>
       <div class="footer__contacts">
-        <a class="footer__contact" href="tel:+380950038718"
-          >+380 (95) 003-87-18</a
-        >
         <a class="footer__contact" href="mailto:inbox@atticlab.net"
           >inbox@atticlab.net</a
         >
@@ -68,7 +65,7 @@ export default {
   }
 
   &__img {
-    max-width: 150px;
+    max-width: 120px;
   }
 
   &__menu,
