@@ -4,9 +4,6 @@
     <div class="contact__main">
       <b-container fluid="lg">
         <BigBackgroundText
-          v-observe-visibility="{
-            callback: debounce(handleBigTextAnimation, 300),
-          }"
           :options="{
             content: 'contact us',
             color: 'white',
@@ -163,8 +160,6 @@ export default {
   }
 
   &-background-text {
-    animation: rotate 4s ease-in-out alternate infinite;
-
     @media (max-width: 960px) {
       text-align: center !important;
     }

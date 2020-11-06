@@ -9,7 +9,6 @@
             color: 'white',
             position: 'right',
             fontSize: '9em',
-            animation: true,
           }"
           class="our-work-background-text"
         />
@@ -60,7 +59,7 @@ export default {
       projects: [
         {
           name: 'Everstake',
-          image: 'https://atticlab.net/img/everstake.png',
+          image: `${require('~/assets/images/everstake.png')}`,
           description:
             'Your Social Staking Platform. Everstake helps institutional investors and regular token holders to profit off their crypto assets. We operate in a wide range of Proof of Stake blockchains, providing our customers with numerous options to choose from. Pick the most promising projects, delegate with Everstake and make 5%-20% annually.',
           date: 'JAN 13, 2019',
