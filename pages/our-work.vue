@@ -8,7 +8,7 @@
             content: 'Our work',
             color: 'white',
             position: 'right',
-            fontSize: '9em',
+            fontSize: '6em',
           }"
           class="our-work-background-text"
         />
@@ -25,11 +25,18 @@
               class="our-work-image"
             />
             <div class="our-work-description">
-              <p class="our-work__title">{{ project.name }}</p>
-              <p v-if="project.description" class="our-work__paragraph">
-                {{ project.description }}
-              </p>
-              <p class="our-work__date">{{ project.date }}</p>
+              <a
+                :href="project.website || project.repository"
+                :alt="project.name"
+                target="_blank"
+                class="our-work__link"
+              >
+                <p class="our-work__title">{{ project.name }}</p>
+                <p v-if="project.description" class="our-work__paragraph">
+                  {{ project.description }}
+                </p>
+                <p class="our-work__date">{{ project.date }}</p>
+              </a>
             </div>
           </div>
         </div>
@@ -63,16 +70,65 @@ export default {
           description:
             'Your Social Staking Platform. Everstake helps institutional investors and regular token holders to profit off their crypto assets. We operate in a wide range of Proof of Stake blockchains, providing our customers with numerous options to choose from. Pick the most promising projects, delegate with Everstake and make 5%-20% annually.',
           date: 'JAN 13, 2019',
+          website: 'https://everstake.one',
         },
         {
-          name: 'Humaniq',
-          image: 'https://atticlab.net/img/humaniq.png',
-          date: 'AUGUST 16, 2017',
+          name: 'Teztracker',
+          image: `${require('~/assets/images/teztracker.jpg')}`,
+          description:
+            'TezTracker is an open-source Tezos explorer based on the Conseil indexer. Teztracker provides a standard block explorer set of features along with some unique functionality when it comes to statistics and NFT’s.',
+          repository: 'https://github.com/everstake/teztracker',
+        },
+        {
+          name: 'Cosmoscan',
+          image: `${require('~/assets/images/cosmoscan.jpg')}`,
+          website: 'https://cosmoscan.net/ ',
+          description:
+            'Cosmoscan is the first data and statistics explorer for the Cosmos network. It provides information oт the overall network operations, governance details, validators and much more. This is still an MVP, so if you have any suggestions, please reach out.',
+          repository: 'https://github.com/everstake/cosmoscan-api',
+        },
+        {
+          name: 'Oasismonitor',
+          image: `${require('~/assets/images/oasismonitor.jpg')}`,
+          website: 'https://oasismonitor.com/ ',
+          description:
+            'A robust and full blockchain explorer and API for the Oasis network. Provides the most extensive information on transactions, validators and overall network stats.',
+          repository: 'https://github.com/everstake/oasis-explorer',
+        },
+        {
+          name: 'Substrate VSCode plugin',
+          image: `${require('~/assets/images/vscode-plugin.jpg')}`,
+          description:
+            'This plugin provides a convenient development environment for the Parity Substrate framework for the VSCode users.',
+          repository: 'https://github.com/everstake/vscode-plugin-substrate',
+        },
+        {
+          name: 'Substrate Atom plugin',
+          image: `${require('~/assets/images/atom-plugin.jpg')}`,
+          description:
+            'The plugin provides a convenient development environment for the Parity Substrate framework for the VSCode users.\n',
+          repository: 'https://github.com/everstake/atom-plugin-substrate',
+        },
+        {
+          name: 'NEO IDE',
+          image: `${require('~/assets/images/neo-ide.jpg')}`,
+          description: `Create contracts for the Neo blockchain without the need to set up the environment and download packages for developers, just open Neo IDE in your browser and start creating the future.`,
+          repository: 'https://github.com/everstake/neo-ide',
+          website: 'http://neo-ide.com',
+        },
+        {
+          name: 'IOST IDE',
+          image: `${require('~/assets/images/iost-ide.jpg')}`,
+          description:
+            'Online IDE for the IOST chain, comes with a set of standard IDE features.',
+          website: 'https://iost-ide.everstake.one/',
+          repository: 'https://github.com/everstake/iost-ide',
         },
         {
           name: 'OpenBankIT',
           image: 'https://atticlab.net/img/openbank.png',
           date: 'JANUARY 19, 2017',
+          website: 'https://openbankit.com/',
         },
         {
           name: 'НАЦИОНАЛЬНАЯ КРИПТОВАЛЮТА',
@@ -83,11 +139,6 @@ export default {
           name: 'Smart money',
           image: 'https://atticlab.net/img/smartmoney.png',
           date: 'OCTOBER 5, 2016',
-        },
-        {
-          name: 'Cryptagio',
-          image: 'https://atticlab.net/img/cryptagio.png',
-          date: 'SEPTEMBER 16, 2016',
         },
       ],
     }
@@ -129,12 +180,20 @@ export default {
 
   &-item {
     position: relative;
-    min-height: 600px;
-    padding: 5% 0;
+    height: 600px;
+    padding: 35px 0;
 
     @media (max-width: 960px) {
       text-align: center;
       min-height: auto;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
     }
   }
 
@@ -196,6 +255,10 @@ export default {
     @media (max-width: 960px) {
       text-align: center !important;
     }
+  }
+
+  &__link:hover {
+    text-decoration: none;
   }
 }
 </style>
