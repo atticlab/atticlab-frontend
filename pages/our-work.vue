@@ -142,6 +142,21 @@ export default {
           image: 'https://atticlab.net/img/smartmoney.png',
           description: 'SmartMoney is a new generation electronic money system. Clever money that will protect the interests of its owner. The concept that bitcoin brought to us has turned the minds and understanding of many skeptics. In practice, I proved that the values can be transmitted over the Internet.',
           date: 'OCTOBER 5, 2016',
+          repository: 'https://github.com/everstake/harmony_bridge_backend ',
+        },
+        {
+          name: 'Harp bridge',
+          image: `${require('~/assets/images/harp-harmony-polkadot-bridge.jpg')}`,
+          description: 'A bidirectional bridge between Harmony and Polkadot (Edgeware).',
+          status: 'in progress',
+          repository: 'https://github.com/everstake/harmony_bridge_backend ',
+        },
+        {
+          name: 'Terra Wormhole bridge',
+          image: `${require('~/assets/images/wormhole-terra-solana-bridge.jpg')}`,
+          description: 'Terra-Solana-Ethereum Wormhole bridge which allows fast and decentralized crowss-chains transfers.',
+          status: 'in progress',
+          repository: 'https://github.com/everstake/wormhole',
         },
       ],
     }
@@ -189,6 +204,7 @@ export default {
     @media (max-width: 960px) {
       text-align: center;
       min-height: auto;
+      height: auto;
     }
 
     &:first-child {
