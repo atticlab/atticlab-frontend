@@ -50,9 +50,7 @@
 <script>
 /*eslint-disable*/
 import BigBackgroundText from '~/components/BigBackgroundText.vue'
-import { ObserveVisibility } from 'vue-observe-visibility'
 import { animation } from '~/services/animation.service'
-import anime from 'animejs'
 import debounce from 'lodash/debounce'
 
 export default {
