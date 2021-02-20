@@ -1,7 +1,13 @@
-<template>
+<template functional>
   <div class="logo">
     <NuxtLink :to="{ name: 'index' }">
-      <img class="logo__image" src="~/assets/images/logo.png" alt="Atticlab" />
+      <img
+        class="logo__image"
+        width="80px"
+        height="73px"
+        src="~/assets/images/logo.png"
+        alt="Atticlab"
+      />
     </NuxtLink>
   </div>
 </template>
@@ -11,10 +17,3 @@ export default {
   name: 'TheLogotype',
 }
 </script>
-
-<style lang="scss" scoped>
-.logo__image {
-  display: inline-block;
-  max-width: 80px;
-}
-</style>

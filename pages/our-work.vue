@@ -29,6 +29,7 @@
                 :href="project.website || project.repository"
                 :alt="project.name"
                 target="_blank"
+                rel="nofollow noopener"
                 class="our-work__link"
               >
                 <p class="our-work__title">{{ project.name }}</p>
@@ -49,12 +50,27 @@
 
 <script>
 /*eslint-disable*/
-import BigBackgroundText from '~/components/BigBackgroundText.vue'
+const BigBackgroundText = () =>
+  import(
+    /* webpackChunkName: "BigBackgroundText" */ '~/components/BigBackgroundText.vue'
+  )
 import { animation } from '~/services/animation.service'
 import debounce from 'lodash/debounce'
 
 export default {
   name: 'OurWork',
+  head() {
+    return {
+      title: 'Our work',
+      meta: [
+        {
+          hid: 'Atticlab',
+          name: 'Atticlab',
+          content: 'Our work page',
+        },
+      ],
+    }
+  },
   components: {
     BigBackgroundText,
   },

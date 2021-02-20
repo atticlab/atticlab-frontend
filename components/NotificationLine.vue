@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <div class="notification">
     <b-container fluid="lg">
       <b-row>

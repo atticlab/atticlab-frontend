@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <div class="socials">
     <a
       v-for="(social, index) in socials"
@@ -6,6 +6,7 @@
       :href="social.href"
       class="socials__link"
       target="_blank"
+      rel="nofollow noopener"
     >
       <span v-if="mode === 'text'"> {{ social.name }} </span>
       <font-awesome-icon
