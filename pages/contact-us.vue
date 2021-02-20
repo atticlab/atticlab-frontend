@@ -83,7 +83,6 @@ const BigBackgroundText = () =>
     /* webpackChunkName: "BigBackgroundText" */ '~/components/BigBackgroundText.vue'
   )
 import { ObserveVisibility } from 'vue-observe-visibility'
-import { animation } from '~/services/animation.service'
 import debounce from 'lodash/debounce'
 
 export default {
@@ -115,40 +114,6 @@ export default {
       },
       show: true,
     }
-  },
-  methods: {
-    handleBigTextAnimation(nodeInViewport, { target }) {
-      if (nodeInViewport) {
-        animation({
-          targets: target,
-          translateY: [-50, 0],
-          opacity: 1,
-          duration: 1500,
-          delay: 300,
-          complete() {
-            if (!nodeInViewport) {
-              target.style.opacity = 0
-            }
-          },
-        })
-      }
-    },
-    onSubmit(evt) {
-      evt.preventDefault()
-      alert(JSON.stringify(this.form))
-    },
-    onReset(evt) {
-      evt.preventDefault()
-      // Reset our form values
-      this.form.email = ''
-      this.form.name = ''
-      this.form.checked = []
-      // Trick to reset/clear native browser form validation state
-      this.show = false
-      this.$nextTick(() => {
-        this.show = true
-      })
-    },
   },
 }
 </script>
