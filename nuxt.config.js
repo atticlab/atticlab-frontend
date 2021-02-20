@@ -1,18 +1,6 @@
 export default {
-  /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
-  mode: 'spa',
-  /*
-   ** Nuxt target
-   ** See https://nuxtjs.org/api/configuration-target
-   */
+  ssr: false,
   target: 'static',
-  /*
-   ** Headers of the page
-   ** See https://nuxtjs.org/api/configuration-head
-   */
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -54,16 +42,33 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/fontawesome-module
-    '@nuxtjs/fontawesome',
+    [
+      '@nuxtjs/fontawesome',
+      {
+        icons: {
+          imports: [
+            {
+              set: '@fortawesome/free-solid-svg-icons',
+              icons: ['times'],
+            },
+            {
+              set: '@fortawesome/free-brands-svg-icons',
+              icons: [
+                'reddit',
+                'linkedin',
+                'facebook',
+                'twitter',
+                'medium',
+                'github',
+                'telegram',
+              ],
+            },
+          ],
+        },
+      },
+    ],
+    '@aceforth/nuxt-optimized-images',
   ],
-  fontawesome: {
-    icons: {
-      brands: true,
-    },
-  },
-  /*
-   ** Nuxt.js modules
-   */
   modules: [
     // Doc: https://github.com/bootstrap-vue/bootstrap-vue
     'bootstrap-vue/nuxt',
@@ -89,6 +94,39 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {
+    extend(config, ctx) {
+      if (ctx && ctx.isClient) {
+        config.optimization.splitChunks.maxSize = 512000
+      }
+    },
+    babel: {
+      compact: true,
+    },
     extractCSS: true,
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.(css|vue)$/,
+            chunks: 'all',
+            enforce: true,
+          },
+        },
+      },
+    },
+  },
+  router: {
+    prefetchLinks: true,
+  },
+  render: {
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        return ['style'].includes(type)
+      },
+    },
+  },
+  optimizedImages: {
+    optimizeImages: true,
   },
 }

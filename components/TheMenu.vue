@@ -19,6 +19,7 @@
           class="menu__link menu__link--target"
           href="https://everstake.one/"
           target="_blank"
+          rel="nofollow noopener"
         >
           Everstake
         </b-nav-item>

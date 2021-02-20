@@ -7,7 +7,12 @@
   >
     <b-container>
       <div class="footer__logo">
-        <img class="footer__img" src="~assets/images/logo.png" alt="Atticlab" />
+        <img
+          width="120px"
+          height="110px"
+          src="~assets/images/logo.png"
+          alt="Atticlab"
+        />
       </div>
       <div class="footer__socials">
         <!-- begin social networks -->
@@ -19,7 +24,12 @@
         <NuxtLink class="footer__link" :to="{ name: 'about' }"
           >About us</NuxtLink
         >
-        <a class="footer__link" href="https://everstake.one/" target="_blank">
+        <a
+          class="footer__link"
+          href="https://everstake.one/"
+          target="_blank"
+          rel="nofollow noopener"
+        >
           Everstake
         </a>
         <NuxtLink class="footer__link" :to="{ name: 'our-work' }"
@@ -62,10 +72,6 @@ export default {
 
   &__logo {
     text-align: center;
-  }
-
-  &__img {
-    max-width: 120px;
   }
 
   &__menu,
