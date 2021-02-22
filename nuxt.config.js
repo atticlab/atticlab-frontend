@@ -42,33 +42,23 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/fontawesome-module
-    [
-      '@nuxtjs/fontawesome',
-      {
-        icons: {
-          imports: [
-            {
-              set: '@fortawesome/free-solid-svg-icons',
-              icons: ['times'],
-            },
-            {
-              set: '@fortawesome/free-brands-svg-icons',
-              icons: [
-                'reddit',
-                'linkedin',
-                'facebook',
-                'twitter',
-                'medium',
-                'github',
-                'telegram',
-              ],
-            },
-          ],
-        },
-      },
-    ],
+    ['@nuxtjs/fontawesome'],
     '@aceforth/nuxt-optimized-images',
   ],
+  fontawesome: {
+    icons: {
+      solid: ['faTimes', 'faQuoteLeft'],
+      brands: [
+        'faReddit',
+        'faGithub',
+        'faLinkedin',
+        'faFacebook',
+        'faTwitter',
+        'faMedium',
+        'faTelegram',
+      ],
+    },
+  },
   modules: [
     // Doc: https://github.com/bootstrap-vue/bootstrap-vue
     'bootstrap-vue/nuxt',
