@@ -1,7 +1,7 @@
 <template functional>
   <div class="socials">
     <a
-      v-for="(social, index) in socials"
+      v-for="(social, index) in props.socials"
       :key="index"
       :href="social.href"
       class="socials__link"
