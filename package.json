@@ -48,26 +48,17 @@
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.2.5",
-    "image-minimizer-webpack-plugin": "^2.2.0",
-    "imagemin-gifsicle": "^7.0.0",
-    "imagemin-jpegtran": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0",
     "imagemin-pngquant": "^9.0.1",
     "imagemin-svgo": "^8.0.0",
     "jest": "^26.1.0",
     "lint-staged": "^10.2.11",
-    "lqip-loader": "^2.2.1",
     "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
-    "responsive-loader": "^2.3.0",
     "sass-loader": "^9.0.3",
-    "sharp": "^0.27.1",
-    "sqip-loader": "^1.0.0",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
-    "vue-jest": "^3.0.4",
-    "webp-loader": "^0.6.0"
+    "vue-jest": "^3.0.4"
   }
 }
