@@ -2,6 +2,7 @@ FROM node:12.4.0-alpine as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json /app/package.json
+RUN apk add --no-cache autoconf
 RUN npm install --silent
 RUN npm install @vue/cli@3.7.0 -g
 COPY . /app
