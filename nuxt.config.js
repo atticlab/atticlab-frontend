@@ -43,7 +43,6 @@ export default {
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/fontawesome-module
     ['@nuxtjs/fontawesome'],
-    '@aceforth/nuxt-optimized-images',
   ],
   fontawesome: {
     icons: {
@@ -115,8 +114,5 @@ export default {
         return ['style'].includes(type)
       },
     },
-  },
-  optimizedImages: {
-    optimizeImages: true,
   },
 }
