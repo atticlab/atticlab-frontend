@@ -440,6 +440,10 @@ export default {
   }
 
   &__feature {
+    @media (max-width: 480px) {
+      padding-left: 15px;
+    }
+
     &::before {
       content: '';
       display: inline-block;
@@ -448,6 +452,10 @@ export default {
       height: 2px;
       background-color: #ddd7d7;
       vertical-align: middle;
+
+      @media (max-width: 480px) {
+        display: none;
+      }
     }
   }
 
@@ -456,6 +464,10 @@ export default {
 
     @media (max-width: 768px) {
       margin-left: 0;
+    }
+
+    @media (max-width: 480px) {
+      margin-left: auto;
     }
   }
 }
