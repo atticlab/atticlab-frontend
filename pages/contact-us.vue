@@ -78,14 +78,28 @@
 
 <script>
 /*eslint-disable*/
-import BigBackgroundText from '~/components/BigBackgroundText.vue'
+const BigBackgroundText = () =>
+  import(
+    /* webpackChunkName: "BigBackgroundText" */ '~/components/BigBackgroundText.vue'
+  )
 import { ObserveVisibility } from 'vue-observe-visibility'
 import { animation } from '~/services/animation.service'
-import anime from 'animejs'
 import debounce from 'lodash/debounce'
 
 export default {
   name: 'ContactUs',
+  head() {
+    return {
+      title: 'Contact us',
+      meta: [
+        {
+          hid: 'Atticlab',
+          name: 'Atticlab',
+          content: 'Contact us page',
+        },
+      ],
+    }
+  },
   components: {
     BigBackgroundText,
   },

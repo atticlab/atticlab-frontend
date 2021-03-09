@@ -175,11 +175,26 @@
 import debounce from 'lodash/debounce'
 import { ObserveVisibility } from 'vue-observe-visibility'
 import { animation } from '~/services/animation.service'
-import BigBackgroundText from '~/components/BigBackgroundText.vue'
+const BigBackgroundText = () =>
+  import(
+    /* webpackChunkName: "BigBackgroundText" */ '~/components/BigBackgroundText.vue'
+  )
 import anime from 'animejs'
 
 export default {
   name: 'Index',
+  head() {
+    return {
+      title: 'Atticlab',
+      meta: [
+        {
+          hid: 'Atticlab',
+          name: 'Atticlab',
+          content: 'Atticlab main page',
+        },
+      ],
+    }
+  },
   components: {
     BigBackgroundText,
   },
@@ -211,23 +226,7 @@ export default {
     handleHeaderAnimation(nodeInViewport) {
       if (nodeInViewport) {
         const title = document.querySelectorAll('.page__title')
-        // const subtitle = document.querySelectorAll('.page__subtitle')
-        // const desktopLogotype = document.querySelectorAll('.home-logo path')
-        // const mobileLogotype = document.querySelectorAll(
-        //   '.home-logo svg.home__animated-text'
-        // )
         const contactButton = document.querySelector('.home-contact')
-
-        // anime({
-        //   targets: desktopLogotype,
-        //   strokeDashoffset: [anime.setDashoffset, 0],
-        //   easing: 'easeInOutSine',
-        //   duration: 5000,
-        //   direction: 'alternate',
-        //   loop: true,
-        //   delay: 500,
-        //   opacity: 1,
-        // })
 
         anime({
           targets: [title, contactButton],
@@ -236,21 +235,6 @@ export default {
           duration: 500,
           delay: 500,
         })
-
-        // anime({
-        //   targets: [subtitle, mobileLogotype],
-        //   opacity: [0, 1],
-        //   translateY: [-50, 0],
-        //   easing: 'easeInOutQuad',
-        //   duration: 500,
-        //   delay: 500,
-        //   begin: function(anim) {
-        //     document.querySelector('.home-logo svg.home__animated-text').style.display = 'block';
-        //   },
-        //   complete: function(anim) {
-        //     document.querySelector('.home-logo svg.home__animated-text').style.display = 'none';
-        //   }
-        // })
       }
     },
     handleCounterAnimation(nodeInViewport) {
@@ -280,7 +264,7 @@ export default {
           once: true,
           begin() {
             // target.style.visibility = 'visible';
-          }
+          },
         })
       } else {
         // target.style.visibility = 'hidden';
@@ -289,37 +273,6 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.test-container {
-  position: relative;
-  display: inline-block;
-}
-.test {
-  &-point {
-    position: absolute;
-    bottom: 186px;
-    content: '';
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #6ba462;
-  }
-  &-point-1 {
-    left: -6px;
-  }
-  &-point-2 {
-    left: 100px;
-  }
-  &-point-3 {
-    left: 200px;
-  }
-  &-point-4 {
-    left: 304px;
-  }
-}
-</style>
 
 <style lang="scss" scoped>
 .home {

@@ -90,10 +90,25 @@
 </template>
 
 <script>
-import SocialNetworks from '../components/SocialNetworks'
+const SocialNetworks = () =>
+  import(
+    /* webpackChunkName: "SocialNetworks" */ '~/components/SocialNetworks.vue'
+  )
 export default {
   name: 'Ownership',
   components: { SocialNetworks },
+  head() {
+    return {
+      title: 'Ownership',
+      meta: [
+        {
+          hid: 'Atticlab',
+          name: 'Atticlab',
+          content: 'Ownership page',
+        },
+      ],
+    }
+  },
 }
 </script>
 

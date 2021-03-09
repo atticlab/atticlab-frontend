@@ -29,6 +29,7 @@
                 :href="project.website || project.repository"
                 :alt="project.name"
                 target="_blank"
+                rel="nofollow noopener"
                 class="our-work__link"
               >
                 <p class="our-work__title">{{ project.name }}</p>
@@ -49,14 +50,27 @@
 
 <script>
 /*eslint-disable*/
-import BigBackgroundText from '~/components/BigBackgroundText.vue'
-import { ObserveVisibility } from 'vue-observe-visibility'
+const BigBackgroundText = () =>
+  import(
+    /* webpackChunkName: "BigBackgroundText" */ '~/components/BigBackgroundText.vue'
+  )
 import { animation } from '~/services/animation.service'
-import anime from 'animejs'
 import debounce from 'lodash/debounce'
 
 export default {
   name: 'OurWork',
+  head() {
+    return {
+      title: 'Our work',
+      meta: [
+        {
+          hid: 'Atticlab',
+          name: 'Atticlab',
+          content: 'Our work page',
+        },
+      ],
+    }
+  },
   components: {
     BigBackgroundText,
   },
@@ -127,34 +141,39 @@ export default {
         {
           name: 'OpenBankIT',
           image: 'https://atticlab.net/img/openbank.png',
-          description: 'OpenbankIT is an open-source banking platform for managing e-money that uses blockchain technology. We have developed a complete stack of technologies for banking industry, whose purpose is to eliminate technological barriers between financial institutions. Transparency and reliability of the platform are guaranteed by crypto technologies. Platform is under active development due to constant requests from our clients.',
+          description:
+            'OpenbankIT is an open-source banking platform for managing e-money that uses blockchain technology. We have developed a complete stack of technologies for banking industry, whose purpose is to eliminate technological barriers between financial institutions. Transparency and reliability of the platform are guaranteed by crypto technologies. Platform is under active development due to constant requests from our clients.',
           date: 'JANUARY 19, 2017',
           website: 'https://openbankit.com/',
         },
         {
           name: 'NATIONAL CRYPTOCURRNECY',
           image: 'https://atticlab.net/img/nat-crypto.png',
-          description: 'A green-field development project implemented jointly with Deloitte under auspices of the National Bank of Ukraine, which is in progress and is subject to the NDA.',
+          description:
+            'A green-field development project implemented jointly with Deloitte under auspices of the National Bank of Ukraine, which is in progress and is subject to the NDA.',
           date: 'DECEMBER 3, 2016',
         },
         {
           name: 'Smart money',
           image: 'https://atticlab.net/img/smartmoney.png',
-          description: 'SmartMoney is a new generation electronic money system. Clever money that will protect the interests of its owner. The concept that bitcoin brought to us has turned the minds and understanding of many skeptics. In practice, I proved that the values can be transmitted over the Internet.',
+          description:
+            'SmartMoney is a new generation electronic money system. Clever money that will protect the interests of its owner. The concept that bitcoin brought to us has turned the minds and understanding of many skeptics. In practice, I proved that the values can be transmitted over the Internet.',
           date: 'OCTOBER 5, 2016',
           repository: 'https://github.com/everstake/harmony_bridge_backend ',
         },
         {
           name: 'Harp bridge',
           image: `${require('~/assets/images/harp-harmony-polkadot-bridge.jpg')}`,
-          description: 'A bidirectional bridge between Harmony and Polkadot (Edgeware).',
+          description:
+            'A bidirectional bridge between Harmony and Polkadot (Edgeware).',
           status: 'in progress',
           repository: 'https://github.com/everstake/harmony_bridge_backend ',
         },
         {
           name: 'Terra Wormhole bridge',
           image: `${require('~/assets/images/wormhole-terra-solana-bridge.jpg')}`,
-          description: 'Terra-Solana-Ethereum Wormhole bridge which allows fast and decentralized crowss-chains transfers.',
+          description:
+            'Terra-Solana-Ethereum Wormhole bridge which allows fast and decentralized crowss-chains transfers.',
           status: 'in progress',
           repository: 'https://github.com/everstake/wormhole',
         },
