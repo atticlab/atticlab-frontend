@@ -79,6 +79,20 @@ export default {
       debounce,
       projects: [
         {
+          name: 'Harp bridge',
+          image: `${require('~/assets/images/harp-harmony-polkadot-bridge.jpg')}`,
+          description: 'A bidirectional bridge between Harmony and Polkadot (Edgeware).',
+          status: 'in progress',
+          repository: 'https://github.com/everstake/harmony_bridge_backend ',
+        },
+        {
+          name: 'Terra Wormhole bridge',
+          image: `${require('~/assets/images/wormhole-terra-solana-bridge.jpg')}`,
+          description: 'Terra-Solana-Ethereum Wormhole bridge which allows fast and decentralized crowss-chains transfers.',
+          status: 'in progress',
+          repository: 'https://github.com/everstake/wormhole',
+        },
+        {
           name: 'Everstake',
           image: `${require('~/assets/images/everstake.png')}`,
           description:
