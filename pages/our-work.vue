@@ -175,22 +175,6 @@ export default {
           date: 'OCTOBER 5, 2016',
           repository: 'https://github.com/everstake/harmony_bridge_backend ',
         },
-        {
-          name: 'Harp bridge',
-          image: `${require('~/assets/images/harp-harmony-polkadot-bridge.jpg')}`,
-          description:
-            'A bidirectional bridge between Harmony and Polkadot (Edgeware).',
-          status: 'in progress',
-          repository: 'https://github.com/everstake/harmony_bridge_backend ',
-        },
-        {
-          name: 'Terra Wormhole bridge',
-          image: `${require('~/assets/images/wormhole-terra-solana-bridge.jpg')}`,
-          description:
-            'Terra-Solana-Ethereum Wormhole bridge which allows fast and decentralized crowss-chains transfers.',
-          status: 'in progress',
-          repository: 'https://github.com/everstake/wormhole',
-        },
       ],
     }
   },
