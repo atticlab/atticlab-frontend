@@ -1,11 +1,13 @@
 {
-  "producer_account_name": "atticlabbosb",
+  "producer_account_name": "atticlabtlbp",
+  "producer_public_key": "Key: EOS7kbT3mBeUyQ2LRSNf3yanYei42w4TNpQgZhRbdALH3AuPALvHQ",
   "org": {
-    "candidate_name": "Attic Lab",
+    "candidate_name": "AtticLab",
     "website": "https://atticlab.net",
-    "code_of_conduct":"",
+    "code_of_conduct":"https://steemit.com/eos/@attic-lab/attic-lab-eos-block-producer-candidate",
     "ownership_disclosure":"https://atticlab.net/ownership/",
     "email":"inbox@atticlab.net",
+    "phone":"TF_Registry",
     "branding": {
       "logo_256":"https://atticlab.net/atticlab-logo-256.png",
       "logo_1024":"https://atticlab.net/atticlab-logo-1000.png",
@@ -20,12 +22,12 @@
     "social": {
       "steemit": "attic-lab",
       "twitter": "atticlab_it",
-      "youtube": "AtticLab",
+      "youtube": "",
       "facebook": "atticlab",
       "github":"atticlab",
-      "reddit": "atticlab_it",
+      "reddit": "",
       "keybase": "",
-      "telegram": "atticlabeosb",
+      "telegram": "atticlabtelos",
       "wechat":""
     }
   },
@@ -47,7 +49,7 @@
         "longitude": 30.517631
       },
       "node_type": "seed",
-      "p2p_endpoint": "bos.atticlab.net:7776"      
+      "p2p_endpoint": "telosseed1.atticlab.net:9876"
     },
     {
       "location": {
@@ -57,8 +59,8 @@
         "longitude": 30.517631
       },
       "node_type": "full",
-      "api_endpoint": "http://bosapi.atticlab.net",
-      "ssl_endpoint": "https://sslbosapi.atticlab.net"
+      "api_endpoint": "http://telosapi.atticlab.net",
+      "ssl_endpoint": "https://ssltelosapi.atticlab.net"
     }
   ]
 }
