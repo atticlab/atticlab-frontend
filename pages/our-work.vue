@@ -154,7 +154,7 @@ export default {
         },
         {
           name: 'OpenBankIT',
-          image: 'https://atticlab.net/img/openbank.png',
+          image: `${require('~/assets/images/openbank.jpg')}`,
           description:
             'OpenbankIT is an open-source banking platform for managing e-money that uses blockchain technology. We have developed a complete stack of technologies for banking industry, whose purpose is to eliminate technological barriers between financial institutions. Transparency and reliability of the platform are guaranteed by crypto technologies. Platform is under active development due to constant requests from our clients.',
           date: 'JANUARY 19, 2017',
@@ -162,14 +162,14 @@ export default {
         },
         {
           name: 'NATIONAL CRYPTOCURRNECY',
-          image: 'https://atticlab.net/img/nat-crypto.png',
+          image: `${require('~/assets/images/nat-crypto.jpg')}`,
           description:
             'A green-field development project implemented jointly with Deloitte under auspices of the National Bank of Ukraine, which is in progress and is subject to the NDA.',
           date: 'DECEMBER 3, 2016',
         },
         {
           name: 'Smart money',
-          image: 'https://atticlab.net/img/smartmoney.png',
+          image: `${require('~/assets/images/smartmoney.jpg')}`,
           description:
             'SmartMoney is a new generation electronic money system. Clever money that will protect the interests of its owner. The concept that bitcoin brought to us has turned the minds and understanding of many skeptics. In practice, I proved that the values can be transmitted over the Internet.',
           date: 'OCTOBER 5, 2016',
